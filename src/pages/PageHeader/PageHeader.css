@@ -1,0 +1,40 @@
+#pageHeader {
+	height: 70px;
+	margin-bottom: 10px;
+	background-color: #1e0d2c;
+	color: #d8bfd8;
+	grid-template-rows: 30px 40px;
+    display: grid;
+}
+
+#title {
+    grid-row: 1/2;
+	padding: 10px 0px 0px 30px;
+	justify-self: start;
+}
+
+#pageHeaderNavbar {
+    grid-row: 2/3;
+	align-self: end;
+	justify-self: center;
+	align-content: end;
+}
+
+.page-header-button {
+	border: 1px solid #d8bfd8;
+	border-bottom: none;
+
+	background-color: #1e0d2c;
+	color: #d8bfd8;
+
+	padding: 5px 10px 0px 10px;
+
+	transition: color 0.5s ease-out;
+	transition: background-color 0.5s ease-out;
+}
+
+.page-header-button:hover {
+	background-color: #d8bfd8;
+	color: #1e0d2c;
+	cursor: pointer;
+}
