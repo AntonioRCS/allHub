@@ -21,7 +21,6 @@ const LittleSquare = () => {
 		const currentField = mainField.current;
 		const playerPos = currentField.querySelector('.cell.player');
 		const playerCord = playerPos.id.split('-');
-		const futurePos = currentField.children[]
 		console.log(playerCord)
 	};
 
