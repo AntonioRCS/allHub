@@ -1,38 +1,28 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./LittleSquare.css";
+import CreateArray from "../../functions/CreateArray";
 
 const LittleSquare = () => {
 	// Os ID's são as colQnt e linesQnt -1
-	const linesQnt = 54;
-	const colQnt = 125;
-	let playerPos = [0, 0];
+	const mainField = useRef(null);
+	const startPlayBtn = useRef(null);
+	const [isRunning, setIsRunning] = useState(false);
+
+	const [lines] = useState(CreateArray(30));
+	const [col] = useState(CreateArray(35));
+	const [space] = useState(5);
+	const colQnt = 35;
 	let speed = 1;
 	let wallCol = colQnt - 1;
 	let wallPos = [];
 	let score = 0;
 
-	let intervalId;
-
 	const movePlayer = (vert, horz) => {
-		const player = document.getElementById(
-			`${playerPos[0]}-${playerPos[1]}`
-		);
-		let futurePos = playerPos;
-
-		futurePos[0] = playerPos[0] + vert;
-		if (futurePos[0] < 0) playerPos[0] = 53;
-		else if (futurePos[0] >= 54) playerPos[0] = 0;
-
-		futurePos[1] = playerPos[1] + horz;
-		if (futurePos[1] < 0) playerPos[1] = 124;
-		else if (futurePos[1] >= 125) playerPos[1] = 0;
-
-		player.className = "cell";
-
-		const playerNextMove = document.getElementById(
-			`${futurePos[0]}-${futurePos[1]}`
-		);
-		playerNextMove.className = "cell player";
+		const currentField = mainField.current;
+		const playerPos = currentField.querySelector('.cell.player');
+		const playerCord = playerPos.id.split('-');
+		const futurePos = currentField.children[]
+		console.log(playerCord)
 	};
 
 	const handleArrowKeyPress = (event) => {
@@ -55,25 +45,23 @@ const LittleSquare = () => {
 	};
 
 	const clearBoard = () => {
-		for (let i = 0; i < linesQnt; i++) {
-			for (let j = 0; j < colQnt; j++) {
-				const cell = document.getElementById(`${i}-${j}`);
-				cell.className = "cell";
+		const currentField = mainField.current;
+		for (let i = 0; i < lines.length; i++) {
+			for (let j = 0; j < col.length; j++) {
+				//querySelector with ID equal 'i-j'
+				currentField.querySelector('[id="'+i+'-'+j+'"]').className = 'cell'
 			}
 		}
 	};
 
 	const createNewWall = () => {
-		const startPoint = Math.floor(Math.random() * 54);
-		wallCol = colQnt - 1;
-		wallPos = [];
-		let j = 0;
-		for (let i = startPoint; j < 45; i++) {
-			if (i > 53) i = 0;
-			const point = document.getElementById(`${i}-${wallCol}`);
-			point.className = "cell wall";
-			wallPos.push([i, wallCol]);
-			j++;
+		const currentField = mainField.current;
+		let currentPoint = Math.floor(Math.random() * lines.length);
+		const repeat = lines.length - space;
+		for(let i = 0; i < repeat; i++) {
+			if(currentPoint >= lines.length) currentPoint = 0;
+			currentField.children[currentPoint].children[col.length - 1].className = 'cell wall';
+			currentPoint++;
 		}
 	};
 
@@ -113,56 +101,61 @@ const LittleSquare = () => {
 	};
 
 	const startPlay = (e) => {
-		document.getElementById("score").innerHTML = `Pontuação: ${score}`;
+		const currentField = mainField.current;
+		currentField.focus();
 		score = 0;
 		e.target.disabled = true;
-		document.addEventListener("keydown", handleArrowKeyPress);
-		const player = document.getElementById(
-			`${playerPos[0]}-${playerPos[1]}`
-		);
-		player.className = "cell player";
-		createNewWall();
-		intervalId = setInterval(moveWall, 25);
+		currentField.children[0].children[0].className = "cell player";
+		createNewWall()
+		// setIsRunning(true);
 	};
 
 	const endPlay = () => {
-		document.getElementById("score").innerHTML = `Pontuação: ${score}`;
-		clearInterval(intervalId);
+		// setIsRunning(false);
+		startPlayBtn.current.disabled = false
 		clearBoard();
-		document.removeEventListener("keydown", handleArrowKeyPress);
-		playerPos = [0, 0];
-		alert("Você perdeu!");
 	};
 
 	useEffect(() => {
-		//Create Board
-		for (let i = 0; i < linesQnt; i++) {
-			const line = document.createElement("div");
-			line.id = `L-${i}`;
-			line.className = "line";
-			document.getElementById(`mainField`).append(line);
-			for (let j = 0; j < colQnt; j++) {
-				const cell = document.createElement("div");
-				cell.id = `${i}-${j}`;
-				cell.className = "cell";
-				document.getElementById(`L-${i}`).append(cell);
-			}
+		let intervalId;
+		if(isRunning) {
+			intervalId = setInterval(moveWall, 25);
+		} else {
+			clearInterval(intervalId);
 		}
-	}, []);
+		return () => clearInterval(intervalId);
+	}, [isRunning]);
 
 	return (
-		<React.Fragment>
+		<div id="littleSquareBody">
 			<div id="leftField">
-				<button id="startPlay" onClick={() => startPlay(event)}>
+				<button id="startPlay" ref ={startPlayBtn} onClick={startPlay}>
 					Começar
 				</button>
 				<button onClick={endPlay}>Finalizar</button>
 			</div>
-			<div id="mainField"></div>
-			<div id="rightField">
-				<span id="score">Pontuação: 0</span>
+			<div
+				id="mainField"
+				tabIndex="0"
+				ref={mainField}
+				onKeyDown={handleArrowKeyPress}
+			>
+				{lines.map((itemI, indexI) => (
+					<div key={itemI} id={`L-${indexI}`} className="line">
+						{col.map((itemJ, indexJ) => (
+							<div
+								key={itemJ}
+								id={`${indexI}-${indexJ}`}
+								className="cell"
+							></div>
+						))}
+					</div>
+				))}
 			</div>
-		</React.Fragment>
+			<div id="rightField">
+				<span id="score">Pontuação: {score}</span>
+			</div>
+		</div>
 	);
 };
 
