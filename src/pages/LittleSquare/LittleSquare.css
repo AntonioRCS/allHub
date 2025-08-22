@@ -1,8 +1,19 @@
 #littleSquareBody {
     display: grid;
-    grid-template-columns: 150px 1fr 150px;
+    grid-template-columns: 250px 1fr 250px;
     grid-template-rows: 150px 1fr 150px;
     height: 100%;
+}
+
+#intro {
+    grid-column: 1/4;
+    grid-row: 1;
+    margin: 30px;
+}
+
+#intro a {
+    color:#1e0d2c;
+    text-decoration: underline;
 }
 
 #mainField {
@@ -20,6 +31,10 @@
     grid-column: 1;
     grid-row: 2;
     justify-self: center;
+}
+
+.little-square-btn {
+    margin: 10px;
 }
 
 #rightField {
@@ -49,4 +64,8 @@
 
 .wall {
     background-color: black;
+}
+
+#score {
+    margin: 10px;
 }

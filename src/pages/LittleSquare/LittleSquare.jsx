@@ -137,16 +137,25 @@ const LittleSquare = () => {
 			clearInterval(intervalId);
 		}
 		return () => clearInterval(intervalId);
-	// eslint-disable-next-line react-hooks/exhaustive-deps
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [isRunning]);
 
 	return (
 		<div id="littleSquareBody">
+			<div id="intro">
+				Esse projeto realizado em React.js puro, faz com que ao iniciar
+				o jogo o programa leia os Inputs do teclado (não é possível utilizar o celular, <u>por enquanto</u>) para mexer o jogador, enquanto uma parede vem para para-lo. Esse
+				projeto (
+				<a href="https://github.com/AntonioRCS/allHub/blob/main/src/pages/LittleSquare/LittleSquare.jsx">
+					aqui
+				</a>
+				) foi onde eu aprendi as boas práticas da linguagem.
+			</div>
 			<div id="leftField">
-				<button id="startPlay" ref={startPlayBtn} onClick={startPlay}>
+				<button id="startPlay" ref={startPlayBtn} onClick={startPlay} className="little-square-btn">
 					Começar
 				</button>
-				<button onClick={endPlay}>Finalizar</button>
+				<button onClick={endPlay} className="little-square-btn">Finalizar</button>
 			</div>
 			<div
 				id="mainField"

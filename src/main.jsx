@@ -14,7 +14,7 @@ createRoot(document.getElementById("root")).render(
 			<div id="route-body">
 				<Routes>
 					<Route path="allHub" element={<PageHeader />}>
-						<Route path="homepage" element={<Homepage />} />
+						<Route path="" element={<Homepage />} />
 						<Route path="little-square" element={<LittleSquare />} />
 					</Route>
 					<Route path="*" element={<Page404 />} />
