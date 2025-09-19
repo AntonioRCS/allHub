@@ -72,13 +72,11 @@ const LittleSquare = () => {
 
 	const createNewWall = () => {
 		const currentField = mainField.current;
-		let currentPoint = Math.floor(Math.random() * lines.length);
-		const repeat = lines.length - space;
+		let currentPoint = Math.floor(Math.random() * col.length);
+		const repeat = col.length - space;
 		for (let i = 0; i < repeat; i++) {
-			if (currentPoint >= lines.length) currentPoint = 0;
-			currentField.children[currentPoint].children[
-				col.length - 1
-			].className = "cell wall";
+			if (currentPoint >= col.length) currentPoint = 0;
+			currentField.children[col.length - 1].children[currentPoint].className = "cell wall";
 			currentPoint++;
 		}
 	};
@@ -116,7 +114,7 @@ const LittleSquare = () => {
 		currentField.focus();
 		setScore(0);
 		e.target.disabled = true;
-		currentField.children[0].children[0].className = "cell player";
+		currentField.children[lines.length-1].children[0].className = "cell player";
 		createNewWall();
 		setIsRunning(true);
 	};
