@@ -43,7 +43,7 @@ const Abilities = () => {
 				</div>
 				<div className="abilities-card-body">
 					<div>Typescript</div>
-					<div className="abilities-card-star">★☆☆☆☆</div>
+					<div className="abilities-card-star">★★★☆☆</div>
 				</div>
 			</div>
 		</div>

@@ -1,12 +1,54 @@
 #experience {
+    display: grid;
+    grid-template-columns: 10px 1fr 1fr 10px;
     width: 100%;
     justify-self: center;
     justify-items: center;
 }
 
 #experienceTitle {
+    grid-column: 1/-1;
     font-size: 30px;
     font-weight: bold;
     border-bottom: 5px solid purple;
     margin-bottom: 70px;
+}
+
+#experienceBody {
+    width: 100%;
+}
+
+#experienceCard1 {
+    grid-column: 2/3;
+}
+
+#experienceCard2 {
+    grid-column: 3/4;
+}
+
+#experienceCard3 {
+    grid-column: 2/3;
+}
+
+#experienceCard4 {
+    grid-column: 3/4;
+}
+
+.experience-body-card {
+    justify-self: start;
+    padding: 30px;
+}
+
+.experience-body-card-title {
+    font-weight: bolder;
+    font-size: 20px;
+    color: purple;
+}
+
+.experience-body-card-year {
+    font-size: 10px;
+}
+
+.experience-body-card-desc {
+    margin-bottom: 10px;;
 }

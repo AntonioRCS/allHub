@@ -4,6 +4,7 @@ import Header from "../../components/header/header";
 import Start from "../../components/Start/Start"
 import Abilities from "../../components/Abilities/Abilities";
 import Experience from "../../components/Experience/Experience";
+import Contact from "../../components/Contact/Contact";
 
 const MainBody = () => {
 	return (
@@ -12,6 +13,7 @@ const MainBody = () => {
 			<Start />
 			<Abilities />
 			<Experience />
+			<Contact />
 		</React.Fragment>
 	);
 };

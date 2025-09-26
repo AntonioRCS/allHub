@@ -8,6 +8,10 @@
 	color: black;
 	grid-template-columns: 150px 1fr;
 	display: grid;
+
+	position: fixed;
+	width: 100%;
+	border-bottom: 2px solid violet;
 }
 
 #headerTitle {

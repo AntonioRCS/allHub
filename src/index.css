@@ -24,7 +24,15 @@ a {
 	text-decoration: none;
 }
 
+label {
+	display: block;
+}
+
 #route-body {
 	min-height: 100vh;
 	color: #1e0d2c;
+}
+
+.title {
+	font-weight: bold;
 }
