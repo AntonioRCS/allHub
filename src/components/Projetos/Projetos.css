@@ -1,0 +1,39 @@
+.projetos {
+  padding: 70px 0;
+}
+
+.projetos__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.projeto {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: border-color 0.2s;
+}
+
+.projeto:hover {
+  border-color: var(--primaria);
+}
+
+.projeto h3 {
+  font-family: var(--fonte-header);
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.projeto p {
+  color: var(--texto-suave);
+  font-size: 0.95rem;
+  flex: 1;
+}
+
+.projeto__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+}

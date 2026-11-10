@@ -1,0 +1,80 @@
+:root {
+  --primaria: #bf70ff;
+  --secundaria: #800080;
+  --terciaria: #ffffff;
+  --neutra: #000000;
+
+  --fundo: #141414;
+  --fundo-alt: #101010;
+  --card: #161616;
+  --borda: #2a2a2a;
+  --texto-suave: #bdbdbd;
+  --tag-fundo: #2a0f33;
+
+  --fonte-header: 'Manrope', sans-serif;
+  --fonte-body: 'Inter', sans-serif;
+  --fonte-label: 'Space Grotesk', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  background: var(--fundo);
+  color: var(--terciaria);
+  font-family: var(--fonte-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: var(--fonte-header);
+  font-weight: 400;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--primaria);
+  outline-offset: 3px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.titulo-secao {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  margin-bottom: 28px;
+}
+
+.tag {
+  font-family: var(--fonte-label);
+  font-size: 0.75rem;
+  color: #e9c9ff;
+  background: var(--tag-fundo);
+  padding: 4px 14px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}

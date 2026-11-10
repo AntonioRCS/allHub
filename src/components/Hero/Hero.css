@@ -1,0 +1,54 @@
+.hero {
+  padding: 110px 0 100px;
+}
+
+.hero__interno {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero__label {
+  font-family: var(--fonte-label);
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--primaria);
+  margin-bottom: 12px;
+}
+
+.hero__titulo {
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  line-height: 1.1;
+  max-width: 14em;
+  margin-bottom: 32px;
+}
+
+.hero__titulo span {
+  color: var(--secundaria);
+}
+
+.hero__sub {
+  font-family: var(--fonte-label);
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8a8a8a;
+  max-width: 36em;
+  margin-bottom: 36px;
+}
+
+.hero__resumo {
+  max-width: 44em;
+  color: var(--texto-suave);
+  margin-bottom: 24px;
+}
+
+.hero__skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  list-style: none;
+}

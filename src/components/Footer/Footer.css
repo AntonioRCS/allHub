@@ -1,0 +1,8 @@
+.footer {
+  background: var(--neutra);
+  padding: 28px 20px;
+  text-align: center;
+  font-family: var(--fonte-label);
+  font-size: 0.8rem;
+  color: #8a8a8a;
+}
