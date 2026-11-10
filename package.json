@@ -2,11 +2,7 @@
   "homepage": "https://antoniorcs.github.io/allHub/",
   "name": "allhub",
   "private": true,
-<<<<<<< HEAD
   "version": "1.0.0",
-=======
-  "version": "0.0.0",
->>>>>>> origin/main
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -18,12 +14,8 @@
   },
   "dependencies": {
     "react": "^19.1.1",
-<<<<<<< HEAD
-    "react-dom": "^19.1.1"
-=======
     "react-dom": "^19.1.1",
     "react-router": "^7.8.0"
->>>>>>> origin/main
   },
   "devDependencies": {
     "@eslint/js": "^9.33.0",
