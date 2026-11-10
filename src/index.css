@@ -1,4 +1,5 @@
 :root {
+<<<<<<< HEAD
   --primaria: #bf70ff;
   --secundaria: #800080;
   --terciaria: #ffffff;
@@ -78,3 +79,42 @@ a {
   html { scroll-behavior: auto; }
   * { transition: none !important; }
 }
+=======
+	font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+
+	background-color: white;
+
+	color-scheme: light dark;
+	color: white;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	margin: 0;
+	min-width: 550px;
+	min-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+label {
+	display: block;
+}
+
+#route-body {
+	min-height: 100vh;
+	color: #1e0d2c;
+}
+
+.title {
+	font-weight: bold;
+}
+>>>>>>> origin/main
