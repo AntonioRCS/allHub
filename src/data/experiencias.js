@@ -1,7 +1,7 @@
 export const experiencias = [
   {
     cargo: 'Educador Social',
-    empresa: 'NAICA',
+    empresa: 'Núcleo de Apoio Integral à Criança e ao Adolescente - NAICA',
     periodo: '06/2026 - 10/2026',
     tags: ['Informática básica', 'Ensino'],
     descricao:

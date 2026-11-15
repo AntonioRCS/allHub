@@ -1,7 +1,7 @@
 export const perfil = {
   nome: 'Antônio Ricardo Corrêa Souza',
   resumo:
-    'Desenvolvedor front-end com três estágios na área (React, JavaScript, HTML, CSS, Java e Delphi) e experiência em atendimento a clientes em casos críticos de segurança e fraude. Inglês fluente, aprendizado rápido e facilidade para trabalhar em equipe e se comunicar com públicos diversos.',
+    'Desenvolvedor front-end com três estágios na área (React, JavaScript, HTML e CSS) e experiência em atendimento a clientes em casos críticos de segurança e fraude.',
   comportamentais: ['Trabalho em equipe', 'Atendimento ao cliente', 'Comunicação', 'Aprendizado rápido'],
 }
 

@@ -10,7 +10,7 @@ function Header() {
           <a href="#experiencias">Experiências</a>
           <a href="#projetos">Projetos</a>
         </nav>
-        <a href="#contato" className="header__botao">Me contate</a>
+        <a href="#contato" className="header__botao">Entre em Contato</a>
       </div>
     </header>
   )
