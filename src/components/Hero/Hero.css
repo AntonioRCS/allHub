@@ -18,6 +18,15 @@
   margin-bottom: 12px;
 }
 
+.hero__label--nome {
+  font-family: var(--fonte-header);
+  font-size: 1.4rem;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--terciaria);
+  margin-bottom: 6px;
+}
+
 .hero__titulo {
   font-size: clamp(2.4rem, 6vw, 4.2rem);
   line-height: 1.1;

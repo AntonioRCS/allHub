@@ -5,7 +5,8 @@ const Hero = () => {
   return (
     <section className="hero" id="sobre">
       <div className="container hero__interno">
-        <p className="hero__label">Desenvolvedor React Visionário</p>
+        <p className="hero__label hero__label--nome">Antônio Ricardo Corrêa Souza</p>
+        <p className="hero__label">Instrutor e Desenvolvedor Front-end Júnior</p>
         <h1 className="hero__titulo">
           Construindo o <span>Futuro</span> da Experiência Digital
         </h1>
