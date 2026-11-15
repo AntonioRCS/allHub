@@ -69,6 +69,9 @@ Se você gostou do projeto, tem uma vaga, uma ideia ou só quer trocar uma dica,
 
 **Antônio Ricardo Corrêa Souza**
 Uberlândia, MG
+
 ✉️ antoniorcs67@gmail.com
+
 📱 +55 (34) 99645-6304
+
 🐙 https://github.com/AntonioRCS
