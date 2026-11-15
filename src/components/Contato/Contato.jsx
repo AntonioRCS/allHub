@@ -1,7 +1,7 @@
 import { contato } from '../../data/contato'
 import './Contato.css'
 
-function Contato() {
+const Contato = () => {
   return (
     <section className="contato" id="contato">
       <div className="container contato__interno">
@@ -23,6 +23,6 @@ function Contato() {
       </div>
     </section>
   )
-}
+};
 
 export default Contato

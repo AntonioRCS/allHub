@@ -1,7 +1,7 @@
 import { perfil } from '../../data/perfil'
 import './Hero.css'
 
-function Hero() {
+const Hero = () => {
   return (
     <section className="hero" id="sobre">
       <div className="container hero__interno">
@@ -21,6 +21,6 @@ function Hero() {
       </div>
     </section>
   )
-}
+};
 
 export default Hero

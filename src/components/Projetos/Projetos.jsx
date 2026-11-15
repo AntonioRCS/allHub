@@ -1,7 +1,7 @@
 import { projetos } from '../../data/projetos'
 import './Projetos.css'
 
-function Projetos() {
+const Projetos = () => {
   return (
     <section className="projetos" id="projetos">
       <div className="container">
@@ -20,6 +20,6 @@ function Projetos() {
       </div>
     </section>
   )
-}
+};
 
 export default Projetos

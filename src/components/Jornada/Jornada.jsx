@@ -2,16 +2,16 @@ import { experiencias } from '../../data/experiencias'
 import { tecnologias, educacao, certificados, atividades } from '../../data/perfil'
 import './Jornada.css'
 
-function IconeTerminal() {
+const IconeTerminal = () => {
   return (
     <svg className="exp__icone" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
       <rect x="3" y="4" width="18" height="16" rx="2" />
       <path d="M7 9l3 3-3 3M12 15h5" />
     </svg>
   )
-}
+};
 
-function Jornada() {
+const Jornada = () => {
   return (
     <>
       <section className="jornada" id="experiencias">
@@ -90,6 +90,6 @@ function Jornada() {
       </section>
     </>
   )
-}
+};
 
 export default Jornada
